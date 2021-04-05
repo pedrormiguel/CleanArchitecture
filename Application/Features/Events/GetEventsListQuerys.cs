@@ -7,6 +7,6 @@ namespace Application.Features.Events
     //The parameter is the CustomClass with jus the property need it.
     public class GetEventsListQuerys : IRequest<List<EventListVm>>
     {
-
+        //Test
     }
 }
