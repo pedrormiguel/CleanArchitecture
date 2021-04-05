@@ -1,0 +1,132 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/code/Application/Application.csproj": {}
+  },
+  "projects": {
+    "/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/code/Application/Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/code/Application/Application.csproj",
+        "projectName": "Application",
+        "projectPath": "/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/code/Application/Application.csproj",
+        "packagesPath": "/Users/pedromiguelruiznunez/.nuget/packages/",
+        "outputPath": "/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/code/Application/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/pedromiguelruiznunez/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/code/Domain/Domain.csproj": {
+                "projectPath": "/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/code/Domain/Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/code/Domain/Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/code/Domain/Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/code/Domain/Domain.csproj",
+        "packagesPath": "/Users/pedromiguelruiznunez/.nuget/packages/",
+        "outputPath": "/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/code/Domain/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/pedromiguelruiznunez/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

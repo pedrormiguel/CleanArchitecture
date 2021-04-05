@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "ePWIB+c+hPbyxT0pPxbYuFQpCB8DehEu53XKsUPt0UzgFDD+nZDCCeh8hIjKgdfgs+Q9Md1cm/GTcHjiGghMbw==",
+  "success": true,
+  "projectFilePath": "/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/code/Application/Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/pedromiguelruiznunez/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
+    "/Users/pedromiguelruiznunez/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "/Users/pedromiguelruiznunez/.nuget/packages/mediatr/9.0.0/mediatr.9.0.0.nupkg.sha512",
+    "/Users/pedromiguelruiznunez/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/9.0.0/mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
+    "/Users/pedromiguelruiznunez/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/Users/pedromiguelruiznunez/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/3.0.0/microsoft.extensions.dependencyinjection.abstractions.3.0.0.nupkg.sha512",
+    "/Users/pedromiguelruiznunez/.nuget/packages/microsoft.extensions.options/3.0.0/microsoft.extensions.options.3.0.0.nupkg.sha512",
+    "/Users/pedromiguelruiznunez/.nuget/packages/microsoft.extensions.primitives/3.0.0/microsoft.extensions.primitives.3.0.0.nupkg.sha512",
+    "/Users/pedromiguelruiznunez/.nuget/packages/system.buffers/4.4.0/system.buffers.4.4.0.nupkg.sha512",
+    "/Users/pedromiguelruiznunez/.nuget/packages/system.componentmodel.annotations/4.6.0/system.componentmodel.annotations.4.6.0.nupkg.sha512",
+    "/Users/pedromiguelruiznunez/.nuget/packages/system.memory/4.5.2/system.memory.4.5.2.nupkg.sha512",
+    "/Users/pedromiguelruiznunez/.nuget/packages/system.numerics.vectors/4.4.0/system.numerics.vectors.4.4.0.nupkg.sha512",
+    "/Users/pedromiguelruiznunez/.nuget/packages/system.reflection.emit/4.7.0/system.reflection.emit.4.7.0.nupkg.sha512",
+    "/Users/pedromiguelruiznunez/.nuget/packages/system.runtime.compilerservices.unsafe/4.6.0/system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}
