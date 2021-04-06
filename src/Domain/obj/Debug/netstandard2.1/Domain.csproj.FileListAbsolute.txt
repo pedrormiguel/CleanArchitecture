@@ -6,3 +6,12 @@
 /Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/code/Domain/obj/Debug/netstandard2.1/Domain.csproj.CoreCompileInputs.cache
 /Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/code/Domain/obj/Debug/netstandard2.1/Domain.dll
 /Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/code/Domain/obj/Debug/netstandard2.1/Domain.pdb
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Domain/bin/Debug/netstandard2.1/Domain.deps.json
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Domain/bin/Debug/netstandard2.1/Domain.dll
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Domain/bin/Debug/netstandard2.1/Domain.pdb
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Domain/obj/Debug/netstandard2.1/Domain.csprojAssemblyReference.cache
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Domain/obj/Debug/netstandard2.1/Domain.AssemblyInfoInputs.cache
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Domain/obj/Debug/netstandard2.1/Domain.AssemblyInfo.cs
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Domain/obj/Debug/netstandard2.1/Domain.csproj.CoreCompileInputs.cache
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Domain/obj/Debug/netstandard2.1/Domain.dll
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Domain/obj/Debug/netstandard2.1/Domain.pdb

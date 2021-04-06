@@ -9,3 +9,15 @@
 /Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/code/Application/obj/Debug/netstandard2.1/Application.csproj.CopyComplete
 /Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/code/Application/obj/Debug/netstandard2.1/Application.dll
 /Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/code/Application/obj/Debug/netstandard2.1/Application.pdb
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Application/bin/Debug/netstandard2.1/Application.deps.json
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Application/bin/Debug/netstandard2.1/Application.dll
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Application/bin/Debug/netstandard2.1/Application.pdb
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Application/bin/Debug/netstandard2.1/Domain.dll
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Application/bin/Debug/netstandard2.1/Domain.pdb
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Application/obj/Debug/netstandard2.1/Application.csprojAssemblyReference.cache
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Application/obj/Debug/netstandard2.1/Application.AssemblyInfoInputs.cache
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Application/obj/Debug/netstandard2.1/Application.AssemblyInfo.cs
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Application/obj/Debug/netstandard2.1/Application.csproj.CoreCompileInputs.cache
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Application/obj/Debug/netstandard2.1/Application.csproj.CopyComplete
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Application/obj/Debug/netstandard2.1/Application.dll
+/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Application/obj/Debug/netstandard2.1/Application.pdb
