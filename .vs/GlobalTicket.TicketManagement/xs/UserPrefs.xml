@@ -1,7 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workbench ActiveDocument="Application/Features/Events/GetEventsListQueryHandler.cs">
     <Files>
-      <File FileName="Application/Features/Events/GetEventsListQuerys.cs" Line="1" Column="14" />
       <File FileName="Application/Features/Events/EventListVm.cs" />
       <File FileName="Application/Features/Events/GetEventsListQueryHandler.cs" Line="1" Column="1" />
     </Files>
@@ -10,15 +9,7 @@
         <State name="__root__">
           <Node name="GlobalTicket.TicketManagement" expanded="True">
             <Node name="src" expanded="True">
-              <Node name="Core" expanded="True">
-                <Node name="Application" expanded="True">
-                  <Node name="Features" expanded="True">
-                    <Node name="Events" expanded="True">
-                      <Node name="GetEventsListQueryHandler.cs" selected="True" />
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
+              <Node name="Core" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -26,6 +17,10 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>Application/Application.csproj</String>
+    <String>Domain/Domain.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
