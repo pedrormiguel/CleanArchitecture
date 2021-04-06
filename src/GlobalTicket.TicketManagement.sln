@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.6.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{89BA2BB5-BA6A-4C17-BC70-EA4B1CCD7375}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D8E22D45-FFD8-4E71-B8F0-D2CA53B69CD4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{62730457-C6AD-4DBC-AE08-6B07A9B48830}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CORE", "CORE", "{5F30D8DA-6196-4BFE-ADD3-DF69464EFB63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{0ED0864C-2A08-449A-BC63-DA31D3FDD8A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "INFRASTRUCTURE", "INFRASTRUCTURE", "{2ED618AD-2D39-4861-9B53-959DF170F933}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{62730457-C6AD-4DBC-AE08-6B07A9B48830} = {89BA2BB5-BA6A-4C17-BC70-EA4B1CCD7375}
+		{5F30D8DA-6196-4BFE-ADD3-DF69464EFB63} = {89BA2BB5-BA6A-4C17-BC70-EA4B1CCD7375}
+		{0ED0864C-2A08-449A-BC63-DA31D3FDD8A2} = {89BA2BB5-BA6A-4C17-BC70-EA4B1CCD7375}
+		{2ED618AD-2D39-4861-9B53-959DF170F933} = {89BA2BB5-BA6A-4C17-BC70-EA4B1CCD7375}
+	EndGlobalSection
+EndGlobal
