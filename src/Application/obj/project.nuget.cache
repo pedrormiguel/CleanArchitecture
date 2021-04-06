@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iviooqfopmL9R+JnNL6EC/1b31R7L9FREbAVaXbwu3TnyhT2pEANBZXSOWoo8/9yh6wy8lSEq7pdN3vaSHJpTQ==",
+  "dgSpecHash": "KI6xtWSBjZmg+MOBOE/9iQGnQkA9g0CdR6+1XrwfHSVqEth4Q5KXFa/6Efm4ZLmvvS6eZ2a6GR25RSVD0o8PZw==",
   "success": true,
-  "projectFilePath": "/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/Application/Application.csproj",
+  "projectFilePath": "/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Application/Application.csproj",
   "expectedPackageFiles": [
     "/Users/pedromiguelruiznunez/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
     "/Users/pedromiguelruiznunez/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

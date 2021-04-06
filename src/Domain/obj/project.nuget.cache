@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "p91b6bJFl9O+NBsuCOfskPCU4ENx1Gxe0DGRx2gGjIfQrtbyAIFl6c12WY/65IQyzR0l5SxXqp4d32862na7oQ==",
+  "dgSpecHash": "xbuvA5d2RayQJvQ/9cnAQjtBAkqfxAwfNhSRgcVbKiOYrlvvqG5kIP7dkdwcPA2cKAEzNJ+MpP92224ZmLCgdw==",
   "success": true,
-  "projectFilePath": "/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/Domain/Domain.csproj",
+  "projectFilePath": "/Users/pedromiguelruiznunez/Projects/Practices/Courses/PluralSight/ArchitAspNetCoreApplic/src/Domain/Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
