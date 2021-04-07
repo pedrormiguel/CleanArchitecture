@@ -8,6 +8,7 @@
     <Folder Include="Contracts\" />
     <Folder Include="Features\" />
     <Folder Include="Contracts\Persistence\" />
+    <Folder Include="Features\Events\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
