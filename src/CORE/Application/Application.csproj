@@ -10,6 +10,8 @@
     <Folder Include="Contracts\Persistence\" />
     <Folder Include="Features\Events\" />
     <Folder Include="Profiles\" />
+    <Folder Include="Features\Events\GetEventList\" />
+    <Folder Include="Features\Events\GetEventDetail\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />

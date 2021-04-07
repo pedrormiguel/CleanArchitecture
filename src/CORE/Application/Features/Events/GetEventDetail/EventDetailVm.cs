@@ -1,9 +1,7 @@
 ﻿using System;
-using Domain.Common;
-
-namespace Domain.Entities
+namespace Application.Features.Events.GetEventDetail
 {
-    public class Event : AuditableEntity
+    public class EventDetailVm
     {
         public Guid EventId { get; set; }
 
@@ -15,6 +13,7 @@ namespace Domain.Entities
         public string ImageUrl { get; set; }
 
         public Guid CategoryId { get; set; }
-        public Category Category { get; set; }
+        public CategoryDto Category { get; set; }
     }
 }
+
