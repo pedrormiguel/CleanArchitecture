@@ -10,7 +10,6 @@ namespace Application.Features.Events.GetEventDetail
 {
     public class GetEventDetailQueryHandler : IRequestHandler<GetEvenDetailQuery, EventDetailVm>
     {
-
         private IAsyncRepository<Event> _eventRepository;
         private IAsyncRepository<Category> _categoryRepository;
         private IMapper _autoMapper;
@@ -22,9 +21,17 @@ namespace Application.Features.Events.GetEventDetail
             _autoMapper = autoMapper;
         }
 
-        public Task<EventDetailVm> Handle(GetEvenDetailQuery request, CancellationToken cancellationToken)
+        public async Task<EventDetailVm> Handle(GetEvenDetailQuery request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var eventDetail     = await _eventRepository.GetByIdAsync(request.Id);
+
+            var eventDetailDto  = _autoMapper.Map<EventDetailVm>(eventDetail);
+
+            var category = await _categoryRepository.GetByIdAsync(eventDetailDto.CategoryId);
+
+            eventDetailDto.Category = _autoMapper.Map<CategoryDto>(category);
+
+            return eventDetailDto;
         }
     }
 }
