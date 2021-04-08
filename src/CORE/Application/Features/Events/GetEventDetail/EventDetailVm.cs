@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Application.Features.Events.GetEventDetail
 {
     public class EventDetailVm
@@ -16,4 +17,3 @@ namespace Application.Features.Events.GetEventDetail
         public CategoryDto Category { get; set; }
     }
 }
-

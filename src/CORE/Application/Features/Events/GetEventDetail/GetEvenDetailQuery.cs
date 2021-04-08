@@ -5,6 +5,6 @@ namespace Application.Features.Events.GetEventDetail
 {
     public class GetEvenDetailQuery : IRequest<EventDetailVm>
     {
-        public Guid Id {get; set;}
+        public Guid Id { get; set; }
     }
 }

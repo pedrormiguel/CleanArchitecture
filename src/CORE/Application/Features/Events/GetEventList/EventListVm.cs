@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Application.Features.Events
 {
     //Class that serve as DTO
