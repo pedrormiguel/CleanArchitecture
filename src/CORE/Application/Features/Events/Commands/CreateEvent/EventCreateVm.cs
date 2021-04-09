@@ -3,7 +3,7 @@ using Application.Features.Events.Queries.GetEventDetail;
 
 namespace Application.Features.Events.Commands.CreateEvent
 {
-    public class EventCreateVm
+    public class EventCreateVm 
     {
         public Guid EventId { get; set; }
 

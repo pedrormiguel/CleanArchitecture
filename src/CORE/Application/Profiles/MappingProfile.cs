@@ -1,4 +1,5 @@
 ﻿using Application.Features.Events;
+using Application.Features.Events.Commands.CreateEvent;
 using Application.Features.Events.Queries.GetEventDetail;
 using Application.Features.Events.Queries.GetEventList;
 using AutoMapper;
@@ -12,6 +13,8 @@ namespace Application.Profiles
         {
             CreateMap<Event, EventListVm>().ReverseMap();
             CreateMap<Event, EventDetailVm>().ReverseMap();
+            CreateMap<Event, EventCreateVm>().ReverseMap();
+
             CreateMap<Category, CategoryDto>();
         }
     }
