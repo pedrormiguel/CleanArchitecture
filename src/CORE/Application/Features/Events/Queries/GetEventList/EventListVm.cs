@@ -1,8 +1,9 @@
 ﻿using System;
-namespace Application.Features.Events
+
+namespace Application.Features.Events.Queries.GetEventList
 {
     //Class that serve as DTO
-    //It's just show the informacion that I want.
+    //It's just show the information that I want.
     public class EventListVm
     {
         public Guid Id { get; set; }

@@ -1,8 +1,9 @@
-﻿using System;
+using System;
+using Application.Features.Events.Queries.GetEventDetail;
 
-namespace Application.Features.Events.Queries.GetEventDetail
+namespace Application.Features.Events.Commands.CreateEvent
 {
-    public class EventDetailVm
+    public class EventCreateVm
     {
         public Guid EventId { get; set; }
 
@@ -17,4 +18,3 @@ namespace Application.Features.Events.Queries.GetEventDetail
         public CategoryDto Category { get; set; }
     }
 }
-
