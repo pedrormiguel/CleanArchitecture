@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Application.Features.Events.GetEventDetail
+namespace Application.Features.Events.Queries.GetEventDetail
 {
     public class CategoryDto
     {

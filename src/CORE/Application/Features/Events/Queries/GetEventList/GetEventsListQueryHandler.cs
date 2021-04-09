@@ -7,7 +7,7 @@ using AutoMapper;
 using Domain.Entities;
 using MediatR;
 
-namespace Application.Features.Events
+namespace Application.Features.Events.Queries.GetEventList
 {
     //It's the Handler of the Message, whose responsability is orquest all the logic to Layers.
     public class GetEventsListQueryHandler : IRequestHandler<GetEventsListQuery, List<EventListVm>>

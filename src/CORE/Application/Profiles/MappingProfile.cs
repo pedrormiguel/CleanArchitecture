@@ -1,5 +1,6 @@
 ﻿using Application.Features.Events;
-using Application.Features.Events.GetEventDetail;
+using Application.Features.Events.Queries.GetEventDetail;
+using Application.Features.Events.Queries.GetEventList;
 using AutoMapper;
 using Domain.Entities;
 

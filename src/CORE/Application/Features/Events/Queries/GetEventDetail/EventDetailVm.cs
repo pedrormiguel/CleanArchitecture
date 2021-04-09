@@ -1,6 +1,10 @@
 ﻿using System;
 
+<<<<<<< HEAD:src/CORE/Application/Features/Events/GetEventDetail/EventDetailVm.cs
 namespace Application.Features.Events.GetEventDetail
+=======
+namespace Application.Features.Events.Queries.GetEventDetail
+>>>>>>> 3.0-CQRS:src/CORE/Application/Features/Events/Queries/GetEventDetail/EventDetailVm.cs
 {
     public class EventDetailVm
     {
