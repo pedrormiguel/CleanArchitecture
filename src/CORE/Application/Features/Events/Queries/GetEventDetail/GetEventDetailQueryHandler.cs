@@ -9,16 +9,9 @@ namespace Application.Features.Events.Queries.GetEventDetail
 {
     public class GetEventDetailQueryHandler : IRequestHandler<GetEvenDetailQuery, EventDetailVm>
     {
-<<<<<<< HEAD:src/CORE/Application/Features/Events/GetEventDetail/GetEventDetailQueryHandler.cs
-        private readonly IMapper _autoMapper;
-        private readonly IAsyncRepository<Category> _categoryRepository;
-        private readonly IAsyncRepository<Event> _eventRepository;
-=======
         private readonly IAsyncRepository<Event> _eventRepository;
         private readonly IAsyncRepository<Category> _categoryRepository;
         private readonly IMapper _autoMapper;
->>>>>>> 3.0-CQRS:src/CORE/Application/Features/Events/Queries/GetEventDetail/GetEventDetailQueryHandler.cs
-
         public GetEventDetailQueryHandler(IAsyncRepository<Event> eventRepository,
             IAsyncRepository<Category> categoryRepository, IMapper autoMapper)
         {

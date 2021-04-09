@@ -1,4 +1,5 @@
 ﻿using System;
+using Application.Features.Events.Queries.GetEventDetail;
 using MediatR;
 
 namespace Application.Features.Events.GetEventDetail
