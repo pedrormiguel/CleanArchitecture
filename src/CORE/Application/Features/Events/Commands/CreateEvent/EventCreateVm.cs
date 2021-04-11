@@ -1,13 +1,9 @@
-﻿using System;
-<<<<<<< HEAD
+using System;
 using Application.Features.Events.Queries.GetEventDetail;
-using AutoMapper.Features;
-=======
->>>>>>> Feature-CreateEvent
 
-namespace Application.Features.Events.Queries.GetEventDetail
+namespace Application.Features.Events.Commands.CreateEvent
 {
-    public class EventDetailVm
+    public abstract class EventCreateVm
     {
         public Guid EventId { get; set; }
 
@@ -19,6 +15,5 @@ namespace Application.Features.Events.Queries.GetEventDetail
         public string ImageUrl { get; set; }
 
         public Guid CategoryId { get; set; }
-        public CategoryDto Category { get; set; }
     }
 }
