@@ -1,9 +1,10 @@
+using System;
 using MediatR;
 
 namespace Application.Features.Events.Commands.CreateEvent
 {
-    public class CreateEventCommand : IRequest<EventCreateVm>, IRequest<Unit>
+    public class CreateEventCommand : EventCreateVm, IRequest<Guid>
     {
-        
+
     }
 }

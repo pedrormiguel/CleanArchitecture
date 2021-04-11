@@ -11,6 +11,8 @@
     <Folder Include="Features\Events\" />
     <Folder Include="Features\Events\Queries" />
     <Folder Include="Profiles\" />
+    <Folder Include="Features\Events\Commands\UpdateEvent\" />
+    <Folder Include="Features\Events\Commands\DeleteEvent\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />

@@ -1,3 +1,4 @@
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Application.Contracts.Persistence;
@@ -7,27 +8,25 @@ using MediatR;
 
 namespace Application.Features.Events.Commands.CreateEvent
 {
-    public class CreateEventCommandHandler : IRequestHandler<CreateEventCommand, EventCreateVm>
+    public class CreateEventCommandHandler : IRequestHandler<CreateEventCommand, Guid>
     {
         private readonly IAsyncRepository<Event> _eventRepository;
-        private IAsyncRepository<Category> _categoryRepository;
         private readonly IMapper _autoMapper;
 
-        public CreateEventCommandHandler(IAsyncRepository<Event> eventRepository, IAsyncRepository<Category> categoryRepository, IMapper autoMapper)
+        public CreateEventCommandHandler(IAsyncRepository<Event> eventRepository, IMapper autoMapper)
         {
             _eventRepository = eventRepository;
-            _categoryRepository = categoryRepository;
             _autoMapper = autoMapper;
         }
 
-        public async Task<EventCreateVm> Handle(CreateEventCommand request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(CreateEventCommand request, CancellationToken cancellationToken)
         {
-            
+
             var eventMapped = _autoMapper.Map<Event>(request);
 
             await _eventRepository.AddAsync(eventMapped);
 
-            return _autoMapper.Map<EventCreateVm>(eventMapped);
+            return eventMapped.EventId;
         }
     }
 }
