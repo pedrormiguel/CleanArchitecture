@@ -1,9 +1,4 @@
 ﻿using System;
-<<<<<<< HEAD
-using Application.Features.Events.Queries.GetEventDetail;
-using AutoMapper.Features;
-=======
->>>>>>> Feature-CreateEvent
 
 namespace Application.Features.Events.Queries.GetEventDetail
 {
