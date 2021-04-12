@@ -12,8 +12,8 @@ namespace Application.Features.Events.Queries.GetEventDetail
         private readonly IAsyncRepository<Event> _eventRepository;
         private readonly IAsyncRepository<Category> _categoryRepository;
         private readonly IMapper _autoMapper;
-        public GetEventDetailQueryHandler(IAsyncRepository<Event> eventRepository,
-            IAsyncRepository<Category> categoryRepository, IMapper autoMapper)
+
+        public GetEventDetailQueryHandler(IAsyncRepository<Event> eventRepository, IAsyncRepository<Category> categoryRepository, IMapper autoMapper)
         {
             _eventRepository = eventRepository;
             _categoryRepository = categoryRepository;
