@@ -1,4 +1,5 @@
-﻿using Application.Features.Categories.Queries.GetCategoriesList;
+﻿using Application.Features.Categories.Commands.CreateCategory;
+using Application.Features.Categories.Queries.GetCategoriesList;
 using Application.Features.Categories.Queries.GetCategoriesListWithEvents;
 using Application.Features.Events.Queries.GetEventDetail;
 using Application.Features.Events.Queries.GetEventList;
@@ -13,7 +14,9 @@ namespace Application.Profiles
         {
             CreateMap<Event, EventListVm>().ReverseMap();
             CreateMap<Event, EventDetailVm>().ReverseMap();
+            
             CreateMap<Category, CategoryDto>();
+            CreateMap<Category, CategoryCreateVm>().ReverseMap();
             CreateMap<Category, CategoryListVm>();
             CreateMap<Category, CategoryListWithEventsVm>();
         }
