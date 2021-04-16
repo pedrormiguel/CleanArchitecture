@@ -2,6 +2,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Application.Contracts.Persistence;
+using Application.Exceptions;
 using AutoMapper;
 using Domain.Entities;
 using MediatR;
@@ -23,10 +24,10 @@ namespace Application.Features.Categories.Commands.CreateCategory
         {
            var ifExistCategory = await _categoryRepository.GetByIdAsync(request.Id);
 
-            if (ifExistCategory != null)
-                throw new ApplicationException();
+           if (ifExistCategory != null)
+               throw new NotFoundException("Category", "KEY");
 
-            var categoryToAdd = _autoMapper.Map<Category>(request);
+           var categoryToAdd = _autoMapper.Map<Category>(request);
             
             categoryToAdd = await _categoryRepository.AddAsync(categoryToAdd);
 
