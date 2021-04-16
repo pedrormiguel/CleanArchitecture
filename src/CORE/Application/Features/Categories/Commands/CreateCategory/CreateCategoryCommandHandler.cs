@@ -24,14 +24,14 @@ namespace Application.Features.Categories.Commands.CreateCategory
         {
            var ifExistCategory = await _categoryRepository.GetByIdAsync(request.Id);
 
-           if (ifExistCategory != null)
+           if (ifExistCategory != null) //TODO Remove Mock Parameters
                throw new NotFoundException("Category", "KEY");
 
            var categoryToAdd = _autoMapper.Map<Category>(request);
             
-            categoryToAdd = await _categoryRepository.AddAsync(categoryToAdd);
+           categoryToAdd = await _categoryRepository.AddAsync(categoryToAdd);
 
-            return categoryToAdd.CategoryId;
+           return categoryToAdd.CategoryId;
         }
     }
 }
