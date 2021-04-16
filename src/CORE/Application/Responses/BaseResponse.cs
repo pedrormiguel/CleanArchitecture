@@ -4,24 +4,24 @@ namespace Application.Responses
 {
     public class BaseResponse
     {
-        BaseResponse()
+        public BaseResponse()
         {
-            Succes = true;
+            Success = true;
         }
 
-        BaseResponse(string message = null)
+        public BaseResponse(string message = null)
         {
-            Succes = true;
+            Success = true;
             Message = message;
         }
         
-        BaseResponse(string message, bool succes)
+        public BaseResponse(string message, bool success)
         {
-            Succes = succes;
+            Success = success;
             Message = message;
         }
 
-        public bool Succes { get; set; }
+        public bool Success { get; set; }
         public string Message { get; set; }
         public List<string> ValidationErrors { get; set; }
     }

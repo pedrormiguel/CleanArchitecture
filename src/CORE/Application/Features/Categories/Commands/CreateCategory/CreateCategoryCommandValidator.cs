@@ -5,7 +5,7 @@ using FluentValidation;
 
 namespace Application.Features.Categories.Commands.CreateCategory
 {
-    public class CreateCategoryCommandValidator : AbstractValidator<CategoryCreateVm>
+    public class CreateCategoryCommandValidator : AbstractValidator<CreateCategoryCommand>
     {
         private readonly ICategoryRepository _categoryRepository;
         

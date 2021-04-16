@@ -1,37 +1,50 @@
-using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Application.Contracts.Persistence;
-using Application.Exceptions;
 using AutoMapper;
 using Domain.Entities;
 using MediatR;
 
 namespace Application.Features.Categories.Commands.CreateCategory
 {
-    public class CreateCategoryCommandHandler: IRequestHandler<CreateCategoryCommand, Guid>
+    public class CreateCategoryCommandHandler: IRequestHandler< CreateCategoryCommand ,CreateCategoryCommandResponse>
     {
-        private readonly IAsyncRepository<Category> _categoryRepository;
+        private readonly ICategoryRepository _categoryRepository;
         private readonly IMapper _autoMapper;
         
-        public CreateCategoryCommandHandler(IAsyncRepository<Category> categoryRepository, IMapper autoMapper)
+        public CreateCategoryCommandHandler(ICategoryRepository categoryRepository, IMapper autoMapper)
         {
             _categoryRepository = categoryRepository;
             _autoMapper = autoMapper;
         }
         
-        public async Task<Guid> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
+        public async Task<CreateCategoryCommandResponse> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
         {
-           var ifExistCategory = await _categoryRepository.GetByIdAsync(request.Id);
+           var categoryResponse = new CreateCategoryCommandResponse();
+           var validator = new CreateCategoryCommandValidator(_categoryRepository);
+           var validationResult = await validator.ValidateAsync(request, cancellationToken);
 
-           if (ifExistCategory != null) //TODO Remove Mock Parameters
-               throw new NotFoundException("Category", "KEY");
+           if (validationResult.Errors.Count > 0) 
+           {
+               categoryResponse.Success = false;
+               categoryResponse.ValidationErrors = new List<string>();
 
-           var categoryToAdd = _autoMapper.Map<Category>(request);
-            
-           categoryToAdd = await _categoryRepository.AddAsync(categoryToAdd);
+               foreach (var errors in validationResult.Errors)
+               {
+                   categoryResponse.ValidationErrors.Add(errors.ErrorMessage);
+               }
+           }
+           
+           if(categoryResponse.Success)
+           {
+               var categoryToAdd = _autoMapper.Map<Category>(request);
+               var category = await _categoryRepository.AddAsync(categoryToAdd);
 
-           return categoryToAdd.CategoryId;
+               categoryResponse.CategoryCreateVm = _autoMapper.Map<CategoryCreateVm>(category);
+           }
+
+           return categoryResponse;
         }
     }
 }
