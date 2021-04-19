@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Application
 {
-    public static class ApplicationServiceResgistrarion
+    public static class ApplicationServiceResgistration
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection service)
         {
