@@ -21,6 +21,7 @@ namespace Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //It search for all the EntityConfiguration inside GlobalTicketDbcontext [ Configuration Folder ]
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(GlobalTicketDbContext).Assembly);
             
             //seed data, added through migrations
