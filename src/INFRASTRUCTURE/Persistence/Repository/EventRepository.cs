@@ -17,7 +17,7 @@ namespace Persistence.Repository
 
         public async Task<bool> IsEventNameAndDateUnique(string name, DateTime eventDate)
         {
-            return await _globalTicket.Events.FirstAsync(e => e.Name == name) != null;
+            return await _globalTicket.Events.AnyAsync(e => e.Name.Equals(name) && e.Date == eventDate) ;
         }
     }
 }

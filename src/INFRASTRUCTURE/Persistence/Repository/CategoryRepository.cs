@@ -34,7 +34,7 @@ namespace Persistence.Repository
 
         public async Task<bool> IsCategoryNameUnique(string name)
         {
-            return await GlobalTicket.Categories.FirstAsync(x => x.Name == name) != null;
+            return await GlobalTicket.Categories.AnyAsync( x => x.Name.Equals(name) );
         }
     }
 }
