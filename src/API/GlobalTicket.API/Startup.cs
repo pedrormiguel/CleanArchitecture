@@ -16,11 +16,11 @@ namespace GlobalTicket.API
 {
     public class Startup
     {
-        private readonly IConfiguration configuration;
+        private readonly IConfiguration _configuration;
 
         public Startup(IConfiguration configuration)
         {
-            this.configuration = configuration;
+            this._configuration = configuration;
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -28,8 +28,8 @@ namespace GlobalTicket.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddApplicationServices();
-            services.AddInfrastructureService(configuration); //TODO add appsetting.json ( EmailSettings )
-            services.AddPersistenceServices(configuration);  //TODO add appsetting.json  ( ConnectionString - GlobalTicketManagementStringConnection )
+            services.AddInfrastructureService(_configuration); //TODO add appsetting.json ( EmailSettings )
+            services.AddPersistenceServices(_configuration);  //TODO add appsetting.json  ( ConnectionString - GlobalTicketManagementStringConnection )
 
 
             services.AddControllers();
