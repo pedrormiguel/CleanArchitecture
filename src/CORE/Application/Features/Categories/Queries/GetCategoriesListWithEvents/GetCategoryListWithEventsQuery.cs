@@ -5,6 +5,6 @@ namespace Application.Features.Categories.Queries.GetCategoriesListWithEvents
 {
     public class GetCategoryListWithEventsQuery : IRequest<List<CategoryListWithEventsVm>>
     {
-        public bool WithPassEvents;
+        public bool IncludeHistory;
     }
 }
