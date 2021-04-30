@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Persistence.Repository
 {
-    public class CategoryRepository : BaseRepository<Category> , ICategoryRepository
+    public class CategoryRepository : BaseRepository<Category>, ICategoryRepository
     {
         private readonly GlobalTicketDbContext _globalTicket;
 
@@ -19,22 +19,17 @@ namespace Persistence.Repository
 
         public async Task<IEnumerable<Category>> GetCatgoriesWithEvents(bool includePassEvents)
         {
-            if(includePassEvents)
-                return await _globalTicket.Categories.ToListAsync();
-            else
-            {
-                return (await _globalTicket.Categories.ToArrayAsync())
-                    .Where
-                    (  
-                        // c => c.Events.SelectMany( x => x.Date > DateTime.Now, categories)
-                        c => c.Events.Any( x => x.Date >= DateTime.Now )
-                    );
-            }
+            var allCategories = await _globalTicket.Categories.Include(x => x.Events).ToListAsync();
+
+            if (includePassEvents)
+                return allCategories.Where(c => c.Events.Any(e => e.Date >= DateTime.Now));
+
+            return allCategories;
         }
 
         public async Task<bool> IsCategoryNameUnique(string name)
         {
-            return await GlobalTicket.Categories.AnyAsync( x => x.Name.Equals(name) );
+            return await GlobalTicket.Categories.AnyAsync(x => x.Name.Equals(name));
         }
     }
 }

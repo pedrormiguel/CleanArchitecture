@@ -21,7 +21,7 @@ namespace Application.Features.Categories.Queries.GetCategoriesListWithEvents
         public async Task<List<CategoryListWithEventsVm>> Handle(GetCategoryListWithEventsQuery request, CancellationToken cancellationToken)
         {
             var categoriesWithEvents = 
-                    (await _categoryRepository.GetCatgoriesWithEvents(request.WithPassEvents));
+                    (await _categoryRepository.GetCatgoriesWithEvents(request.IncludeHistory));
 
             return _autoMapper.Map<List<CategoryListWithEventsVm>>(categoriesWithEvents); 
         }
