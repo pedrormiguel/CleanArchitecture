@@ -4,6 +4,7 @@ using Application.Features.Categories.Queries.GetCategoriesList;
 using Application.Features.Categories.Queries.GetCategoriesListWithEvents;
 using Microsoft.AspNetCore.Mvc;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 
 namespace GlobalTicket.API.Controllers
 {
@@ -12,28 +13,29 @@ namespace GlobalTicket.API.Controllers
     public class CategoryController : ControllerBase
     {
         private readonly IMediator _mediatR;
-        
+
         public CategoryController(IMediator mediatR)
         {
             _mediatR = mediatR;
         }
-        
-        [HttpGet("all",Name = "GetAllCategories")]
+
+        [HttpGet("all", Name = "GetAllCategories")]
         public async Task<ActionResult<List<CategoryListVm>>> Get()
         {
             var dto = await _mediatR.Send(new GetCategoryListQuery());
-            
+
             return Ok(dto);
         }
 
         [HttpGet("allWithEvents", Name = "GetAllCategoriesWithEvents")]
-        public async Task<ActionResult<List<CategoryListWithEventsVm>>> GetCategoryEvents( bool includeHistory)
+        //[HttpGet("{includeHistory}")]
+        [ProducesDefaultResponseType]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<List<CategoryListWithEventsVm>>> GetCategoryEvents([FromQuery] bool includeHistory)
         {
-            var getCategoryWithEvents = new GetCategoryListWithEventsQuery() { IncludeHistory = includeHistory};
+            var output = await _mediatR.Send(new GetCategoryListWithEventsQuery() { IncludeHistory = includeHistory });
 
-            await _mediatR.Send(getCategoryWithEvents);
-
-            return Ok(getCategoryWithEvents);
+            return Ok(output);
         }
     }
 }
