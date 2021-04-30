@@ -19,17 +19,12 @@ namespace Persistence.Repository
 
         public async Task<IEnumerable<Category>> GetCatgoriesWithEvents(bool includePassEvents)
         {
-            if(includePassEvents)
-                return await _globalTicket.Categories.ToListAsync();
-            else
-            {
-                return (await _globalTicket.Categories.ToArrayAsync())
-                    .Where
-                    (  
-                        // c => c.Events.SelectMany( x => x.Date > DateTime.Now, categories)
-                        c => c.Events.Any( x => x.Date >= DateTime.Now )
-                    );
-            }
+            var allCategories = await _globalTicket.Categories.Include(x => x.Events).ToListAsync();
+
+           // if (includePassEvents)
+                return allCategories;
+
+            //return allCategories.Where(c => c.Events.Any( e => e.Date >= DateTime.Now) );
         }
 
         public async Task<bool> IsCategoryNameUnique(string name)

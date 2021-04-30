@@ -16,14 +16,14 @@ namespace Application.Profiles
             CreateMap<Event, EventListVm>().ReverseMap();
             CreateMap<Event, EventDetailVm>().ReverseMap();
             CreateMap<Event, EventCreateVm>().ReverseMap();
-            CreateMap<Event, CategoryEventDto>().ReverseMap();
+            CreateMap<Event, CategoryEventDto>();
+
+            CreateMap<Category, CategoryListVm>();
+            CreateMap<Category, CategoryListWithEventsVm>();
 
             CreateMap<Category, CategoryDto>();
-            CreateMap<Category, CategoryListWithEventsVm>().ReverseMap();
-            
-            
+
             CreateMap<Category, CategoryCreateVm>().ReverseMap();
-            CreateMap<Category, CategoryListVm>();
         }
     }
 }
