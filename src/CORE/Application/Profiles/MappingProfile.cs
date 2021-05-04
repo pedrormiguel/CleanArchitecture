@@ -13,17 +13,20 @@ namespace Application.Profiles
     {
         public MappingProfile()
         {
-            CreateMap<Event, EventListVm>().ReverseMap();
-            CreateMap<Event, EventDetailVm>().ReverseMap();
-            CreateMap<Event, EventCreateVm>().ReverseMap();
+            CreateMap<Event, EventListVm>();
+            CreateMap<Event, EventDetailVm>();
+            CreateMap<Event, EventCreateVm>();
             CreateMap<Event, CategoryEventDto>();
 
             CreateMap<Category, CategoryListVm>();
             CreateMap<Category, CategoryListWithEventsVm>();
 
+            CreateMap<CreateCategoryCommand, Category>();
+            CreateMap<Category, CategoryCreateVm>();
+
             CreateMap<Category, CategoryDto>();
 
-            CreateMap<Category, CategoryCreateVm>().ReverseMap();
+
         }
     }
 }

@@ -5,6 +5,7 @@ using Application.Features.Categories.Queries.GetCategoriesListWithEvents;
 using Microsoft.AspNetCore.Mvc;
 using MediatR;
 using Microsoft.AspNetCore.Http;
+using Application.Features.Categories.Commands.CreateCategory;
 
 namespace GlobalTicket.API.Controllers
 {
@@ -36,6 +37,15 @@ namespace GlobalTicket.API.Controllers
             var output = await _mediatR.Send(new GetCategoryListWithEventsQuery() { IncludeHistory = includeHistory });
 
             return Ok(output);
+        }
+
+        [HttpPost("Add", Name = "AddCategory")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<CreateCategoryCommandResponse>> AddCategory([FromBody] CategoryCreateVm category)
+        {
+            var dto = await _mediatR.Send(new CreateCategoryCommand() { Name = category.Name });
+
+            return Ok(dto);
         }
     }
 }
