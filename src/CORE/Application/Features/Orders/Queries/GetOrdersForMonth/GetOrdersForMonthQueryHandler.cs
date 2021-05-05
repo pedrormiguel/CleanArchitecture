@@ -23,16 +23,17 @@ namespace Application.Features.Orders.Queries.GetOrdersForMonth
         public async Task<GetOrderForMonthResponse> Handle(GetOrderForMonthQuery request, CancellationToken cancellationToken)
         {
             var response = new GetOrderForMonthResponse();
-            
-            var orders = ( await _orderRepository.ListAllAsync() )
+
+            //TODO Review if it is worth it order the list here.
+            var orders = (await _orderRepository.ListAllAsync())
                                                 .OrderBy(o => o.OrderPlaced);
-            
+
             if (orders.Any())
             {
                 var ordersMapper = _autoMapper.Map<List<OrderForMothVm>>(orders);
                 response.OrderForMothVm = ordersMapper;
             }
-            
+
             return response;
         }
     }
