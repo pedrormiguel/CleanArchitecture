@@ -26,7 +26,8 @@ namespace Application.Features.Orders.Queries.GetOrdersForMonth
 
             //TODO Review if it is worth it order the list here.
             var orders = (await _orderRepository.ListAllAsync())
-                                                .OrderBy(o => o.OrderPlaced);
+                                                .OrderBy(o => o.OrderPlaced)
+                                                .ToList();
 
             if (orders.Any())
             {

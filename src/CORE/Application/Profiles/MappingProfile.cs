@@ -32,7 +32,7 @@ namespace Application.Profiles
             CreateMap<Category, CategoryDto>();
 
 
-            CreateMap<Event, OrderForMothVm>();
+            CreateMap<Order, OrderForMothVm>();
         }
     }
 }
