@@ -10,8 +10,8 @@ namespace Application
         {
             service.AddAutoMapper(Assembly.GetExecutingAssembly());
             service.AddMediatR(Assembly.GetExecutingAssembly());
-            
-            
+
+
             return service;
         }
     }

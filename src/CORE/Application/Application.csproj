@@ -10,6 +10,7 @@
     <Folder Include="Contracts\Persistence\" />
     <Folder Include="Features\Events\" />
     <Folder Include="Features\Events\Queries" />
+    <Folder Include="Features\Orders\Commands" />
     <Folder Include="Profiles\" />
     <Folder Include="Features\Events\Commands\UpdateEvent\" />
     <Folder Include="Features\Events\Commands\DeleteEvent\" />

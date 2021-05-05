@@ -4,6 +4,7 @@ using Application.Features.Categories.Queries.GetCategoriesListWithEvents;
 using Application.Features.Events.Commands.CreateEvent;
 using Application.Features.Events.Queries.GetEventDetail;
 using Application.Features.Events.Queries.GetEventList;
+using Application.Features.Orders.Queries.GetOrdersForMonth;
 using AutoMapper;
 using Domain.Entities;
 
@@ -27,6 +28,7 @@ namespace Application.Profiles
             CreateMap<Category, CategoryDto>();
 
 
+            CreateMap<Event, OrderForMothVm>();
         }
     }
 }
