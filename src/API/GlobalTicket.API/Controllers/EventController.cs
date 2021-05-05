@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Application.Features.Events.Commands.CreateEvent;
+using Application.Features.Events.Queries.GetEventDetail;
 using Application.Features.Events.Queries.GetEventList;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -22,7 +24,33 @@ namespace GlobalTicket.API.Controllers
         [HttpGet("all", Name = "GetEventList")]
         public async Task<ActionResult<List<EventListVm>>> GetEventList()
         {
-            var dto = await _mediatR.Send(new GetEventsListQuery());
+            var dtos = await _mediatR.Send(new GetEventsListQuery());
+
+            return Ok(dtos);
+        }
+
+        [HttpGet("detail", Name = "GetEventDetails")]
+        public async Task<ActionResult<EventDetailVm>> GetEventDetails([FromQuery] string Id)
+        {
+            var dto = await _mediatR.Send(new GetEvenDetailQuery(Id));
+
+            return Ok(dto);
+        }
+
+        [HttpPost("add", Name = "CreateEvent")]
+        public async Task<ActionResult<CreateEventCommandResponse>> AddEvent([FromBody] CreateEventCommand createEvent)
+        {
+            var dto = await _mediatR.Send(new CreateEventCommand()
+            {
+                Name = createEvent.Name,
+                Price = createEvent.Price,
+                Artist = createEvent.Artist,
+                Description = createEvent.Description,
+                ImageUrl = createEvent.ImageUrl,
+                Date = createEvent.Date,
+                CategoryId = createEvent.CategoryId
+
+            });
 
             return Ok(dto);
         }

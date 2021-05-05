@@ -5,11 +5,13 @@ namespace Application.Features.Events.Queries.GetEventDetail
 {
     public class GetEvenDetailQuery : IRequest<EventDetailVm>
     {
-        public GetEvenDetailQuery(Guid id)
+        public GetEvenDetailQuery(string id)
         {
-            Id = id;
+            var idGuid = new Guid(id);
+
+            Id = idGuid;
         }
 
-        public Guid Id {get; private set;}
+        public Guid Id { get; private set; }
     }
 }

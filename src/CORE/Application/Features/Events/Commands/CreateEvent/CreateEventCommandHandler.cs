@@ -11,7 +11,7 @@ using MediatR;
 
 namespace Application.Features.Events.Commands.CreateEvent
 {
-    public class CreateEventCommandHandler : IRequestHandler<CreateEventCommand, Guid>
+    public class CreateEventCommandHandler : IRequestHandler<CreateEventCommand, CreateEventCommandResponse>
     {
         private readonly IEventRepository _eventRepository;
         private readonly IMapper _autoMapper;
@@ -24,7 +24,7 @@ namespace Application.Features.Events.Commands.CreateEvent
             _emailServices = emailServices;
         }
 
-        public async Task<Guid> Handle(CreateEventCommand request, CancellationToken cancellationToken)
+        public async Task<CreateEventCommandResponse> Handle(CreateEventCommand request, CancellationToken cancellationToken)
         {
             var validator = new CreateEventCommandValidator(_eventRepository);
             var validationResult = await validator.ValidateAsync(request, cancellationToken);
@@ -38,21 +38,21 @@ namespace Application.Features.Events.Commands.CreateEvent
 
             var email = new Email
             {
-                To = "pedrormiguel@outlook.es", 
-                Subject = $"An new Event was created: {request.Name}", 
+                To = "pedrormiguel@outlook.es",
+                Subject = $"An new Event was created: {request.Name}",
                 Body = $"Hi, It's a new Event {request}"
             };
-            
+
             try
             {
                 await _emailServices.SendEmail(email);
             }
-            catch(Exception e)
-            { 
+            catch (Exception e)
+            {
                 //TODO this shouldn't stop the API from doing else so this can be logged 
             }
 
-            return eventMapped.EventId;
+            return new CreateEventCommandResponse() { EventId = eventMapped.EventId };
         }
     }
 }

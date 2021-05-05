@@ -16,7 +16,8 @@ namespace Application.Profiles
         {
             CreateMap<Event, EventListVm>();
             CreateMap<Event, EventDetailVm>();
-            CreateMap<Event, EventCreateVm>();
+
+            CreateMap<CreateEventCommand, Event>();
             CreateMap<Event, CategoryEventDto>();
 
             CreateMap<Category, CategoryListVm>();
