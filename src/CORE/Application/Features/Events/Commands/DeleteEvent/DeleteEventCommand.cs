@@ -3,13 +3,16 @@ using MediatR;
 
 namespace Application.Features.Events.Commands.DeleteEvent
 {
-    public class DeleteEventCommand : IRequest
+    public class DeleteEventCommand : IRequest<DeleteEventCommandResponse>
     {
         public Guid Id { get; set; }
 
-        public DeleteEventCommand(Guid id)
+        public DeleteEventCommand(string id)
         {
-            Id = id;
+            Guid idEvent = new Guid(id);
+
+            Id = idEvent;
         }
+
     }
 }

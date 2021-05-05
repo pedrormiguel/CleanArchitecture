@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Application.Features.Events.Commands.CreateEvent;
+using Application.Features.Events.Commands.DeleteEvent;
+using Application.Features.Events.Commands.UpdateEvent;
 using Application.Features.Events.Queries.GetEventDetail;
 using Application.Features.Events.Queries.GetEventList;
 using MediatR;
@@ -19,7 +21,6 @@ namespace GlobalTicket.API.Controllers
         {
             _mediatR = mediatR;
         }
-
 
         [HttpGet("all", Name = "GetEventList")]
         public async Task<ActionResult<List<EventListVm>>> GetEventList()
@@ -51,6 +52,22 @@ namespace GlobalTicket.API.Controllers
                 CategoryId = createEvent.CategoryId
 
             });
+
+            return Ok(dto);
+        }
+
+        [HttpDelete("delete", Name = "DeleteEvent")]
+        public async Task<ActionResult<DeleteEventCommandResponse>> DeleteEvent([FromQuery] string Id)
+        {
+            var dto = await _mediatR.Send(new DeleteEventCommand(Id));
+
+            return Ok(dto);
+        }
+
+        [HttpPut("update", Name = "UpdateEvent")]
+        public async Task<ActionResult<UpdateEventeCommandResponse>> UpdateEvent([FromQuery] string Id, [FromBody] EventUpdateVm eventUpdateVm)
+        {
+            var dto = await _mediatR.Send(new UpdateEventCommand(Id, eventUpdateVm));
 
             return Ok(dto);
         }

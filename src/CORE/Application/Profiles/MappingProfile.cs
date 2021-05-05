@@ -2,6 +2,7 @@ using Application.Features.Categories.Commands.CreateCategory;
 using Application.Features.Categories.Queries.GetCategoriesList;
 using Application.Features.Categories.Queries.GetCategoriesListWithEvents;
 using Application.Features.Events.Commands.CreateEvent;
+using Application.Features.Events.Commands.UpdateEvent;
 using Application.Features.Events.Queries.GetEventDetail;
 using Application.Features.Events.Queries.GetEventList;
 using Application.Features.Orders.Queries.GetOrdersForMonth;
@@ -19,6 +20,8 @@ namespace Application.Profiles
 
             CreateMap<CreateEventCommand, Event>();
             CreateMap<Event, CategoryEventDto>();
+
+            CreateMap<UpdateEventCommand, Event>();
 
             CreateMap<Category, CategoryListVm>();
             CreateMap<Category, CategoryListWithEventsVm>();
