@@ -6,7 +6,7 @@ namespace Application.Features.Events.Queries.GetEventList
     //It's just show the information that I want.
     public class EventListVm
     {
-        public Guid Id { get; set; }
+        public Guid EventId { get; set; }
         public string Name { get; set; }
         public DateTime Date { get; set; }
         public string ImageUrl { get; set; }
