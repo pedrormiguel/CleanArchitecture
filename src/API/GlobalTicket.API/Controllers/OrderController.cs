@@ -1,6 +1,9 @@
 ﻿using System;
+using System.IO;
+using System.Text;
 using System.Threading.Tasks;
 using Application.Features.Orders.Queries.GetOrdersForMonth;
+using Application.Features.Orders.Queries.GetOrdersForMonthToExcel;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,6 +28,12 @@ namespace GlobalTicket.API.Controllers
             return Ok(dtos);
         }
 
+        [HttpGet("GetOrdersExcel", Name = "GetExcellWithAllOrders")]
+        public async Task<IActionResult> GetExcelWithAllOrders()
+        {
+            var file = await _mediaR.Send(new GetOrdersForMonthToExcelQuery());
 
+            return File(Encoding.UTF8.GetBytes(file.ToString()), "text/csv", "orders.csv");
+        }
     }
 }

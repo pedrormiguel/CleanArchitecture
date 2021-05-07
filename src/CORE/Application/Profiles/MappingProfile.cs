@@ -6,6 +6,7 @@ using Application.Features.Events.Commands.UpdateEvent;
 using Application.Features.Events.Queries.GetEventDetail;
 using Application.Features.Events.Queries.GetEventList;
 using Application.Features.Orders.Queries.GetOrdersForMonth;
+using Application.Features.Orders.Queries.GetOrdersForMonthToExcel;
 using AutoMapper;
 using Domain.Entities;
 
@@ -33,6 +34,7 @@ namespace Application.Profiles
 
 
             CreateMap<Order, OrderForMothVm>();
+            CreateMap<Order, OrdersForMonthToExcelvm>();
         }
     }
 }
