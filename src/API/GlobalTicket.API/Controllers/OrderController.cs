@@ -33,7 +33,7 @@ namespace GlobalTicket.API.Controllers
         {
             var file = await _mediaR.Send(new GetOrdersForMonthToExcelQuery());
 
-            return File(Encoding.UTF8.GetBytes(file.ToString()), "text/csv", "orders.csv");
+            return File(file.Content, file.ContentType, file.NameFile);
         }
     }
 }

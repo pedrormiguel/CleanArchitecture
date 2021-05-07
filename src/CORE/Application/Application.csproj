@@ -15,6 +15,7 @@
     <Folder Include="Features\Events\Commands\UpdateEvent\" />
     <Folder Include="Features\Events\Commands\DeleteEvent\" />
     <Folder Include="Features\Orders\Queries\GetOrdersForMonthToExcel\" />
+    <Folder Include="Models\Export\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="10.0.2" />

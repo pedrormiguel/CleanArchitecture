@@ -1,15 +1,18 @@
 ﻿using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Application.Contracts.Infrastructure;
 using Application.Contracts.Persistence;
+using Application.Models.Export;
 using AutoMapper;
 using MediatR;
 
 namespace Application.Features.Orders.Queries.GetOrdersForMonthToExcel
 {
-    public class GetOrdersForMonthToExcelHandler : IRequestHandler<GetOrdersForMonthToExcelQuery, StringBuilder>
+    public class GetOrdersForMonthToExcelHandler : IRequestHandler<GetOrdersForMonthToExcelQuery, ExcelFile>
     {
 
         private readonly IOrderRepository _orderRepository;
@@ -24,15 +27,13 @@ namespace Application.Features.Orders.Queries.GetOrdersForMonthToExcel
             _automapper = automapper;
         }
 
-        public async Task<StringBuilder> Handle(GetOrdersForMonthToExcelQuery request, CancellationToken cancellationToken)
+        public async Task<ExcelFile> Handle(GetOrdersForMonthToExcelQuery request, CancellationToken cancellationToken)
         {
-            var orders = (await _orderRepository.ListAllAsync());
+            var dtos = await _orderRepository.ListAllAsync();
 
-            var orderMapped = _automapper.Map<IReadOnlyList<OrdersForMonthToExcelvm>>(orders);
+            var orderMapped = _automapper.Map<IReadOnlyCollection<OrdersForMonthToExcelvm>>(dtos);
 
-            var stringBuilder = _exportToExcel.GetOrderToExcel(orderMapped);
-
-            return stringBuilder;
+            return _exportToExcel.GetOrderToExcel(orderMapped);
         }
     }
 }

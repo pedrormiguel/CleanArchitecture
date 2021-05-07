@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using Application.Features.Orders.Queries.GetOrdersForMonthToExcel;
+using Application.Models.Export;
 
 namespace Application.Contracts.Infrastructure
 {
     public interface IExportToExcelServices
     {
-        StringBuilder GetOrderToExcel(IEnumerable<OrdersForMonthToExcelvm> orders);
+        ExcelFile GetOrderToExcel(IEnumerable<OrdersForMonthToExcelvm> orders);
     }
 }
