@@ -10,5 +10,6 @@ namespace Application.Features.Categories.Queries.GetCategoriesListWithEvents
         public string Name { get; set; }
         
         public ICollection<CategoryEventDto> Events { get; set; }
+        
     }
 }

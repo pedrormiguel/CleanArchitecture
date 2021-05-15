@@ -17,7 +17,7 @@ namespace Persistence.Repository
             _globalTicket = globalTicket;
         }
 
-        public async Task<IEnumerable<Category>> GetCatgoriesWithEvents(bool includePassEvents)
+        public async Task<IEnumerable<Category>> GetCategoriesWithEvents(bool includePassEvents)
         {
             var allCategories = await _globalTicket.Categories.Include(x => x.Events).ToListAsync();
 

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Application.Contracts.Persistence;
@@ -21,7 +22,7 @@ namespace Application.Features.Categories.Queries.GetCategoriesListWithEvents
         public async Task<List<CategoryListWithEventsVm>> Handle(GetCategoryListWithEventsQuery request, CancellationToken cancellationToken)
         {
             var categoriesWithEvents = 
-                    (await _categoryRepository.GetCatgoriesWithEvents(request.IncludeHistory));
+                    (await _categoryRepository.GetCategoriesWithEvents(request.IncludeHistory));
 
             return _autoMapper.Map<List<CategoryListWithEventsVm>>(categoriesWithEvents); 
         }

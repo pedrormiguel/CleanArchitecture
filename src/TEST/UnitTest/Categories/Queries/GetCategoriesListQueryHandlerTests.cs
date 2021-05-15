@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Application.Contracts.Persistence;
@@ -9,9 +8,10 @@ using AutoMapper;
 using Domain.Entities;
 using Moq;
 using Shouldly;
+using UnitTest.Mocks;
 using Xunit;
 
-namespace UnitTest.Categories.Commands
+namespace UnitTest.Categories.Queries
 {
     public class GetCategoriesListQueryHandlerTests
     {
