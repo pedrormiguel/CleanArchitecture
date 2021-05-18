@@ -16,11 +16,11 @@ namespace UnitTest.Categories.Queries
     {
         private readonly IMapper _mapper;
         private readonly Mock<ICategoryRepository> _categoryRepositoryMock;
-        
+
         public GetCategoryListWithEventsQueryHandlerTest()
         {
             var configurationProvider = new MapperConfiguration(
-                cfg =>cfg.AddProfile<MappingProfile>() );
+                cfg => cfg.AddProfile<MappingProfile>());
             _mapper = configurationProvider.CreateMapper();
 
             _categoryRepositoryMock = RepositoryMocks.GetCategoryWithEventsRepository();
@@ -33,21 +33,20 @@ namespace UnitTest.Categories.Queries
             var handler = new GetCategoryListWithEventsQueryHandler(_categoryRepositoryMock.Object, _mapper);
 
             var result = await handler.Handle(new GetCategoryListWithEventsQuery { IncludeHistory = true }, CancellationToken.None);
-            
+
             result.ShouldBeOfType<List<CategoryListWithEventsVm>>();
             result.Count.ShouldBe(1);
         }
-        
+
         [Fact]
         public async Task GetCategoriesListWithEventsTest_ShouldReturnAll()
         {
             var handler = new GetCategoryListWithEventsQueryHandler(_categoryRepositoryMock.Object, _mapper);
 
             var result = await handler.Handle(new GetCategoryListWithEventsQuery(), CancellationToken.None);
-            
+
             result.ShouldBeOfType<List<CategoryListWithEventsVm>>();
             result.Count.ShouldBe(4);
         }
     }
-    
 }

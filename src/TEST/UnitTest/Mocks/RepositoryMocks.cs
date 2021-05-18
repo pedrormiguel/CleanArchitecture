@@ -44,13 +44,12 @@ namespace UnitTest.Mocks
 
             mockCategoryRepository.Setup(repo => repo.ListAllAsync()).ReturnsAsync(categories);
 
-            mockCategoryRepository.Setup(repo => repo.AddAsync(It.IsAny<Category>() ) )
-                                  .ReturnsAsync(
-                        (Category category) =>
-                        {
-                            categories.Add(category);
-                            return category;
-                        });
+            mockCategoryRepository.Setup(repo => repo.AddAsync(It.IsAny<Category>()))
+                                  .ReturnsAsync((Category category) =>
+                       {
+                           categories.Add(category);
+                           return category;
+                       });
 
             return mockCategoryRepository;
         }
@@ -74,7 +73,7 @@ namespace UnitTest.Mocks
                 {
                     CategoryId = musicalGuid,
                     Name = "Musicals",
-                    Events = new List<Event>()                
+                    Events = new List<Event>()
                 },
                 new Category
                 {
@@ -87,7 +86,7 @@ namespace UnitTest.Mocks
                     CategoryId = playGuid,
                     Name = "Plays",
                     Events = new List<Event>()
-            }
+                 }
             };
 
             var events = new List<Event>
@@ -121,13 +120,13 @@ namespace UnitTest.Mocks
             categories[1].Events = new List<Event> { events[1] };
 
             var mockRepository = new Mock<ICategoryRepository>();
-            
+
             mockRepository.Setup(repo => repo.GetCategoriesWithEvents(true))
-                .ReturnsAsync(categories.Where( c => c.Events.Any( e => e.Date >= DateTime.Now ) ));
-            
+                .ReturnsAsync(categories.Where(c => c.Events.Any(e => e.Date >= DateTime.Now)));
+
             mockRepository.Setup(repo => repo.GetCategoriesWithEvents(false))
                 .ReturnsAsync(categories);
-            
+
             return mockRepository;
         }
     }
