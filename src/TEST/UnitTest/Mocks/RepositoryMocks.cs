@@ -142,7 +142,7 @@ namespace UnitTest.Mocks
 
             var categoryDuplicate = new Category
             {
-                Name = "Test"
+                Name = "TEST"
             };
 
             var listCategory = new List<Category>()
