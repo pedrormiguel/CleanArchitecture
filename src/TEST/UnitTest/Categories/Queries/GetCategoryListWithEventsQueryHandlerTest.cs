@@ -21,6 +21,7 @@ namespace UnitTest.Categories.Queries
         {
             var configurationProvider = new MapperConfiguration(
                 cfg => cfg.AddProfile<MappingProfile>());
+
             _mapper = configurationProvider.CreateMapper();
 
             _categoryRepositoryMock = RepositoryMocks.GetCategoryWithEventsRepository();

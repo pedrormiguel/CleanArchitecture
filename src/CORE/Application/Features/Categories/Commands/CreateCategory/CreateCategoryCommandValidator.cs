@@ -8,11 +8,11 @@ namespace Application.Features.Categories.Commands.CreateCategory
     public class CreateCategoryCommandValidator : AbstractValidator<CreateCategoryCommand>
     {
         private readonly ICategoryRepository _categoryRepository;
-        
+
         public CreateCategoryCommandValidator(ICategoryRepository categoryRepository)
         {
             _categoryRepository = categoryRepository;
-            
+
             RuleFor(ca => ca.Name)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
                 .NotNull()

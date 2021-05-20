@@ -122,12 +122,47 @@ namespace UnitTest.Mocks
             var mockRepository = new Mock<ICategoryRepository>();
 
             mockRepository.Setup(repo => repo.GetCategoriesWithEvents(true))
-                .ReturnsAsync(categories.Where(c => c.Events.Any(e => e.Date >= DateTime.Now)));
+                          .ReturnsAsync(categories.Where(c => c.Events.Any(e => e.Date >= DateTime.Now)));
 
             mockRepository.Setup(repo => repo.GetCategoriesWithEvents(false))
-                .ReturnsAsync(categories);
+                          .ReturnsAsync(categories);
 
             return mockRepository;
         }
+
+        public static Mock<ICategoryRepository> GetCommandCategoryRepositoryAdd()
+        {
+            var concertGuid = Guid.Parse("{B0788D2F-8003-43C1-92A4-EDC76A7C5DDE}");
+
+            var category = new Category
+            {
+                CategoryId = concertGuid,
+                Name = "Concert"
+            };
+
+            var categoryDuplicate = new Category
+            {
+                Name = "Test"
+            };
+
+            var listCategory = new List<Category>()
+            {
+                categoryDuplicate
+            };
+
+            var mockCategoryRepository = new Mock<ICategoryRepository>();
+
+            mockCategoryRepository.Setup(repo => repo.AddAsync(It.IsAny<Category>()))
+                                  .ReturnsAsync(category);
+
+            mockCategoryRepository.Setup(repo => repo.AddAsync(null))
+                                  .ReturnsAsync(() => null);
+
+            mockCategoryRepository.Setup(repo => repo.IsCategoryNameUnique(It.IsAny<string>()))
+                                  .ReturnsAsync((string name) => listCategory.Any(c => c.Name == name));
+
+            return mockCategoryRepository;
+        }
+ 
     }
 }
